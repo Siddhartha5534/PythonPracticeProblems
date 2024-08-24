@@ -6,6 +6,7 @@
 # 70 <= score < 80	'C'
 # 60 <= score < 70	'D'
 # 0 <= score < 60	'F'
+"""
 #solution
 # Initialize an empty list to store the numbers
 numbers = []
@@ -37,4 +38,33 @@ elif average_grade >= 0 and average_grade < 60 :
     print(f"Grade F  : Wake Up")
 else:
     print("Fail")
+"""
 
+#problem 2
+# Who remembers back to their time in the schoolyard, when girls would take a flower and tear its petals, saying each of the following phrases each time a petal was torn:
+# "I love you"
+# "a little"
+# "a lot"
+# "passionately"
+# "madly"
+# "not at all"
+# If there are more than 6 petals, you start over with "I love you" for 7 petals, "a little" for 8 petals and so on.
+# When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
+# Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a given number of petals. The number of petals is always greater than 0.
+
+SONG_LYRICS = ["I love you","a little","a lot","passionately","madly","not at all"]
+while True:
+    user_input = input("HOW MANY PETALS IN THE FLOWER? ") # asking for an user input
+    try:
+        number = int(user_input) # Try to convert the input to an int
+        if number <=  len(SONG_LYRICS) : # checking if the number is less than OR EQUAL TO 6
+                print(f"The number of petals in the flower is: {number}")
+                for numbers in range(number):
+                    print(SONG_LYRICS[numbers])
+                    numbers = numbers + 1
+                break  # Exit the loop if the input is a valid number # if numbers exceeds the list length,  break out of the while loop
+        else:
+            print("The number should be less than 7. Please try again.") # letting the user know that the number is not less than or equal to 100
+    except ValueError:
+        # If the input is not a valid number, print an error and continue the loop
+        print("Invalid input. Please enter a valid number.") # catching the error raised in the "try" block
