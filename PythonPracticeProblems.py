@@ -51,7 +51,8 @@ else:
 # If there are more than 6 petals, you start over with "I love you" for 7 petals, "a little" for 8 petals and so on.
 # When the last petal was torn there were cries of excitement, dreams, surging thoughts and emotions.
 # Your goal in this kata is to determine which phrase the girls would say at the last petal for a flower of a given number of petals. The number of petals is always greater than 0.
-
+"""
+#solution
 SONG_LYRICS = ["I love you","a little","a lot","passionately","madly","not at all"]
 while True:
     user_input = input("HOW MANY PETALS IN THE FLOWER? ") # asking for an user input
@@ -68,3 +69,7 @@ while True:
     except ValueError:
         # If the input is not a valid number, print an error and continue the loop
         print("Invalid input. Please enter a valid number.") # catching the error raised in the "try" block
+"""
+
+#problem 3
+#Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
