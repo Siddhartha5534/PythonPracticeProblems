@@ -73,6 +73,8 @@ while True:
 
 #problem 3
 #Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+"""
+#solution
 def evenodd():
     while True:
         user_input = input("Enter a number of your choice ") # asking for an user input
@@ -86,5 +88,24 @@ def evenodd():
                 break
         except ValueError: # If the input is not a valid number, print an error and continue the loop
             print("Invalid input. Please enter a valid number.") # catching the error raised in the "try" block
-
 evenodd()
+ """
+#problem 4
+#Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
+# def combat_function():
+#     while True:
+#         user_input = input("Enter a player's current health ") # asking for an user input
+#         user_input1 = input("Enter a player's damage received ") # asking for an user input
+#         try:
+#             current_health = int(user_input) # Try to convert the input to an int
+#             damage_received = int(user_input1) # Try to convert the input to an int
+#             new_health = current_health - damage_received
+#             if new_health > 0:
+#                 print(f"New helth is {new_health}")
+#                 break
+#             else:
+#                 print(f"Abort !!")
+#                 break
+#         except ValueError: # If the input is not a valid number, print an error and continue the loop
+#             print("Invalid input. Please enter a valid number.") # catching the error raised in the "try" block
+# combat_function()
