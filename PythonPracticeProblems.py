@@ -73,3 +73,18 @@ while True:
 
 #problem 3
 #Create a function that takes an integer as an argument and returns "Even" for even numbers or "Odd" for odd numbers.
+def evenodd():
+    while True:
+        user_input = input("Enter a number of your choice ") # asking for an user input
+        try:
+            number = int(user_input) # Try to convert the input to an int
+            if number % 2 == 0:
+                print("It's an even number")
+                break
+            else:
+                print("it's an odd number")
+                break
+        except ValueError: # If the input is not a valid number, print an error and continue the loop
+            print("Invalid input. Please enter a valid number.") # catching the error raised in the "try" block
+
+evenodd()
