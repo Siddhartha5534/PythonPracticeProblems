@@ -113,7 +113,7 @@ combat_function()
 """
 #problem 5
 #Write a program to iterate the first 10 numbers, and in each iteration, print the sum of the current number and previous sum.
-"""
+# """
 previous_sum = 0
 number = 0
 #for number in range(11):
@@ -122,4 +122,4 @@ while number <= 10:
     print(f"the sum of the current and previous number {sum_of_numbers}")
     previous_sum = sum_of_numbers
     number =number + 1
-"""
+# """
