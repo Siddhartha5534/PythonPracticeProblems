@@ -129,4 +129,27 @@ while number <= 10:
 """
 #problem 6
 #Write a function to check palindrome number
+def palindromenumber():
+    while True:
+        user_input = input("Enter a number of your choice ") # asking for an user input
+        try:
+            number = int(user_input) # Try to convert the input to an int
+            original_number = number
+            revised_number = 0
+            while number > 0 :
+                remainder = number % 10
+                revised_number = revised_number * 10 + remainder
+                number = number // 10
+            if original_number == revised_number :
+                print("palindrome number")
+                return revised_number
+                break
+            else :
+                print("Not a palindrome number")
+                return revised_number
+                break
+        except ValueError: # If the input is not a valid number, print an error and continue the loop
+            print("Invalid input. Please enter a valid number.") # catching the error raised in the "try" block
+
+print(palindromenumber())
 
