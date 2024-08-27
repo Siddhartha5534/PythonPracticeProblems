@@ -81,14 +81,18 @@ def evenodd():
         try:
             number = int(user_input) # Try to convert the input to an int
             if number % 2 == 0:
-                print("It's an even number")
+                #print("It's an even number")
+                return number
                 break
             else:
-                print("it's an odd number")
+                #print("it's an odd number")
+                return number
                 break
         except ValueError: # If the input is not a valid number, print an error and continue the loop
             print("Invalid input. Please enter a valid number.") # catching the error raised in the "try" block
-evenodd()
+
+new_variable  = evenodd()*2
+print(new_variable)
 """
 #problem 4
 #Create a combat function that takes the player's current health and the amount of damage recieved, and returns the player's new health. Health can't be less than 0.
@@ -113,7 +117,7 @@ combat_function()
 """
 #problem 5
 #Write a program to iterate the first 10 numbers, and in each iteration, print the sum of the current number and previous sum.
-# """
+"""
 previous_sum = 0
 number = 0
 #for number in range(11):
@@ -122,4 +126,7 @@ while number <= 10:
     print(f"the sum of the current and previous number {sum_of_numbers}")
     previous_sum = sum_of_numbers
     number =number + 1
-# """
+"""
+#problem 6
+#Write a function to check palindrome number
+
