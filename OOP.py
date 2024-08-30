@@ -1,0 +1,20 @@
+class Book():
+    favourites = []
+    def __init__(self,title,pages):
+        self.title = title
+        self.pages = pages
+    def  is_long(self):
+        if self.pages > 100:
+            return True
+        return False
+    def __str__(self) :
+        return f"{self.title} is {self.pages} pages long"
+    def __eq__(self,other) :
+        if self.title == other.title and self.pages == other.pages :
+            return True
+        return False
+book = Book("Agatha Christie",60)
+book1 = Book("Agatha Christie",60)
+Book.favourites.append(book)
+Book.favourites.append(book1)
+print(book == book1)
