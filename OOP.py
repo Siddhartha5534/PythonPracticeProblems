@@ -13,8 +13,11 @@ class Book():
         if self.title == other.title and self.pages == other.pages :
             return True
         return False
+    def __hash__(self):
+        return hash(self.title) ^ hash(self.pages)
 book = Book("Agatha Christie",60)
 book1 = Book("Agatha Christie",60)
 Book.favourites.append(book)
 Book.favourites.append(book1)
 print(book == book1)
+print(hash(book) == hash(book1))
