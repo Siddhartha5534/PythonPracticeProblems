@@ -22,8 +22,10 @@ Book.favourites.append(book1)
 def do_something(book):
     book.title = "Something New"
 do_something(book)
-print(book)
-open('input.txt' , 'a')
+# print(book)
+file = open('input.txt' , 'a')
+# print(type(file))
+file.write("This is a test file. \n")
     
 # print(book == book1)
 # print(hash(book) == hash(book1))
