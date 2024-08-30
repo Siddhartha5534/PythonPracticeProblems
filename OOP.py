@@ -19,5 +19,11 @@ book = Book("Agatha Christie",60)
 book1 = Book("Agatha Christie",60)
 Book.favourites.append(book)
 Book.favourites.append(book1)
-print(book == book1)
-print(hash(book) == hash(book1))
+def do_something(book):
+    book.title = "Something New"
+do_something(book)
+print(book)
+open('input.txt' , 'a')
+    
+# print(book == book1)
+# print(hash(book) == hash(book1))
