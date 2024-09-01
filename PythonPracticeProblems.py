@@ -175,5 +175,10 @@ def palindromenumber():
 
 palindromenumber()
 """
+def func1():
+    x = 50
+    return x
+x=func1()
+print(x)
 
 

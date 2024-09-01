@@ -25,7 +25,24 @@ do_something(book)
 # print(book)
 file = open('input.txt' , 'a')
 # print(type(file))
-file.write("This is a test file. \n")
+file.write("New book1 72\n")
+file.write("New book2 100\n")
+file = open('input.txt' , 'r')
+print(file)
+data = file.read().split('\n')
+print(data)
+file.close()
+print(id(book) == id(book1))
+
+try:
+    file = open("input.txt")
+except FileNotFoundError as e1:
+    print(e1)
+except Exception as e2:
+    print(e2)
+else :
+    with file:
+        print(file.readline())
     
 # print(book == book1)
 # print(hash(book) == hash(book1))
