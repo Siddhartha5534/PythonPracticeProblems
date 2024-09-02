@@ -175,10 +175,14 @@ def palindromenumber():
 
 palindromenumber()
 """
-def func1():
-    x = 50
-    return x
-x=func1()
-print(x)
+def outer_fun(a, b):
+    def inner_fun(c, d):
+        return c + d
+
+    return inner_fun(a, b)
+
+result = outer_fun(5, 10)
+print(result)
+
 
 
